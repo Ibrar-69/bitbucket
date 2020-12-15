@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Show_Customer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="12"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/logo"
+            android:src="@drawable/logo"
+            >
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Detail"
+            android:textSize="20dp"
+            android:layout_margin="15dp"
+            android:id="@+id/tv1"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cam"
+            android:id="@+id/v_img"
+            android:gravity="center"
+            >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Name:"
+            android:textSize="15dp"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:id="@+id/v_name"
+            android:text="Muhammad Abdullah"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Email:"
+            android:textSize="15dp"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:id="@+id/v_email"
+            android:text="Muhammad.Abdullah@gamil.com"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="CNIC:"
+            android:textSize="15dp"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:text="3130370267837"
+            android:id="@+id/v_cnic"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Phone NO:"
+            android:textSize="15dp"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:text="03417237855"
+            android:id="@+id/v_phone"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Joining Date:"
+            android:textSize="15dp"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:text="13/07/2020"
+            android:id="@+id/v_date"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="User Type:"
+            android:textSize="15dp"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:text="Permanent"
+            android:id="@+id/v_usertype"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Fee:"
+            android:textSize="15dp"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:text="2000"
+            android:id="@+id/v_fee"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:textSize="20dp"
+            android:background="@drawable/rectwhite"
+            android:layout_margin="15dp"
+            android:id="@+id/done"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+        </TextView>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SMD Project</string>
+    <string-array name="types">
+        <item>Select Type</item>
+        <item>Permanet</item>
+        <item>Temporary</item>
+    </string-array>
+</resources>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/logo"
+            android:src="@drawable/logo"
+            >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="News Bar"
+            android:textSize="20dp"
+            android:background="@drawable/rectwhite"
+            android:layout_margin="15dp"
+            android:id="@+id/newsbar"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+
+        </TextView>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_gravity="left"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Add Customer"
+        android:textSize="20dp"
+        android:background="@drawable/rectwhite"
+        android:layout_margin="15dp"
+        android:id="@+id/addcustomer"
+        android:textStyle="bold"
+        android:gravity="center"
+        >
+
+    </TextView>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fee Pay"
+        android:textSize="20dp"
+        android:background="@drawable/rectwhite"
+        android:layout_margin="15dp"
+        android:id="@+id/p_fees"
+        android:textStyle="bold"
+        android:gravity="center"
+        >
+
+    </TextView>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    android:orientation="vertical"
+        >
+    <TextView
+        android:layout_gravity="left"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text=" Attendance"
+        android:textSize="20dp"
+        android:background="@drawable/rectwhite"
+        android:layout_margin="15dp"
+        android:id="@+id/attendance"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        >
+
+    </TextView>
+    </LinearLayout>
+<LinearLayout
+    android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    <TextView
+        android:layout_gravity="right"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Edit Customer"
+        android:textSize="20dp"
+        android:background="@drawable/rectwhite"
+        android:layout_margin="15dp"
+        android:id="@+id/editcustomer"
+        android:textStyle="bold"
+        android:gravity="center"
+        >
+
+    </TextView>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    android:orientation="vertical"
+        >
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="News Update"
+        android:textSize="20dp"
+        android:background="@drawable/rectwhite"
+        android:layout_margin="15dp"
+        android:id="@+id/newsupdate"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="left"
+        >
+
+    </TextView>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    android:orientation="vertical"
+        >
+    <TextView
+        android:layout_gravity="right"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="All Customers"
+        android:textSize="20dp"
+        android:background="@drawable/rectwhite"
+        android:layout_margin="15dp"
+        android:id="@+id/allcustomers"
+        android:textStyle="bold"
+        android:gravity="center"
+        >
+
+    </TextView>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    android:orientation="vertical"
+        >
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="20dp"
+        android:background="@drawable/rectwhite"
+        android:layout_margin="15dp"
+        android:id="@+id/logout"
+        android:textStyle="bold"
+        android:gravity="center"
+        >
+
+    </TextView>
+    </LinearLayout>
+
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
