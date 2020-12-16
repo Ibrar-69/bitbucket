@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -56,6 +57,26 @@ public class Update_Customer_Details extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(TextUtils.isEmpty(name.getText().toString())){
+                    name.setError("Name is Required");
+                    return;
+                }
+                if(TextUtils.isEmpty(email.getText().toString())){
+                    email.setError("Email is Required");
+                    return;
+                }
+                if(TextUtils.isEmpty(phone.getText().toString())){
+                    phone.setError("Phone is Required");
+                    return;
+                }
+
+                if(phone.getText().toString().length()<11 ||phone.getText().toString().length()>11 ){
+                    phone.setError("03xx, 7 Digit Phone No Required");
+                    return;
+                }
+
+
+
                 Date d = new Date();
                 CharSequence s  = DateFormat.format("MMMM d, yyyy ", d.getTime());
                 Intent it = new Intent(getApplicationContext(), viewcustomer.class);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,14 @@ public class Edit_Search extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(TextUtils.isEmpty(cnic.getText().toString())){
+                    cnic.setError("Cnic is Required");
+                    return;
+                }
+                if(cnic.getText().toString().length()<13 ||cnic.getText().toString().length()>13 ){
+                    cnic.setError("13 Digit cnic Required");
+                    return;
+                }
                 Customer cobj=StaticClass.get_customer(cnic.getText().toString());
                 if(cobj!=null){
                     System.out.println("We Found It");

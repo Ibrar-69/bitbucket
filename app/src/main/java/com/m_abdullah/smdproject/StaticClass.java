@@ -3,6 +3,7 @@ package com.m_abdullah.smdproject;
 import android.os.Build;
 import android.text.format.DateFormat;
 import android.widget.Adapter;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -54,6 +55,9 @@ public  class StaticClass {
                     add_fee();
                     adapter.notifyDataSetChanged();
                 }
+                else {
+                    add_fee();
+                }
 
             }
            }
@@ -78,7 +82,9 @@ public  class StaticClass {
         String part2=parts[0];
         parts=part2.split(" ");
         part2=parts[1].toString();
-        if(part2.equals("15")){
+        System.out.println(part2);
+        if(part2.equals("16")){
+
             FirebaseFirestore db= FirebaseFirestore.getInstance();
             db.collection("Users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -102,9 +108,15 @@ public  class StaticClass {
                             Date d = new Date();
                             CharSequence s  = DateFormat.format("MMMM d, yyyy ", d.getTime());
                             Map<String,Object> objj=new HashMap<>();
-                            obj.put("Fee","Not_Paid");
-                            obj.put("Date", s.toString());
-                            firestore.collection("Fess").document(cobj.cnic.toString()).update(objj);
+                            objj.put("Fee","Not_Paid");
+                            objj.put("Date", s.toString());
+                            firestore.collection("Fess").document(cobj.cnic.toString()).update(objj).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    System.out.println("Entered");
+
+                                }
+                            });
 
                         }
 
@@ -125,6 +137,7 @@ public  class StaticClass {
                     List<DocumentSnapshot>docs= Objects.requireNonNull(task.getResult()).getDocuments();
                     for(int i=0;i<docs.size();i++){
                         Map<String,Object>obj=docs.get(i).getData();
+
                        c_array.get(i).feestatus=obj.get("Fee").toString();
                     }
                 }

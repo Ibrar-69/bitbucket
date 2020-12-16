@@ -48,6 +48,7 @@
             android:background="@drawable/rectwhite"
             android:layout_margin="20dp"
             android:paddingLeft="20dp"
+            android:inputType="number"
             >
 
         </EditText>

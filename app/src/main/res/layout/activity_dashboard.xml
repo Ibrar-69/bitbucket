@@ -44,6 +44,13 @@
             android:layout_height="wrap_content"
             android:text="News Bar"
             android:textSize="20dp"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:fadingEdge="horizontal"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+
+
             android:background="@drawable/rectwhite"
             android:layout_margin="15dp"
             android:id="@+id/newsbar"

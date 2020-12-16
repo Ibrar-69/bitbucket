@@ -57,6 +57,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
         holder.fee.setText("Fee: "+ls.get(position).feestatus.toString());
         holder.name.setText("Name: "+ls.get(position).name.toString());
         holder.phone.setText("Contact: "+ls.get(position).phone_no);
+
         Picasso.get().load(Uri.parse(ls.get(position).img)).into(holder.dp);
     }
 

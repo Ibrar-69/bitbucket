@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,17 @@ public class attendance extends AppCompatActivity {
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(TextUtils.isEmpty(Cnic.getText().toString())){
+                    Cnic.setError("Cnic is Required");
+                    return;
+                }
+
+                if(Cnic.getText().toString().length()<13 ||Cnic.getText().toString().length()>13 ){
+                    Cnic.setError("13 Digit cnic Required");
+                    return;
+                }
+
+
                 Customer cobj=StaticClass.get_customer(Cnic.getText().toString());
                 if(cobj!=null){
                     System.out.println("We Found It");

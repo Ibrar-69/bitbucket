@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,17 @@ public class feee_paying extends AppCompatActivity {
         pay_fee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(TextUtils.isEmpty(cnic.getText().toString())){
+                    cnic.setError("Cnic is Required");
+                    return;
+                }
+
+                if(cnic.getText().toString().length()<13 ||cnic.getText().toString().length()>13 ){
+                    cnic.setError("13 Digit cnic Required");
+                    return;
+                }
+
+
                 FirebaseFirestore dbb=FirebaseFirestore.getInstance();
                 Customer cobj=StaticClass.get_customer(cnic.getText().toString());
                 if(cobj!=null){
@@ -47,6 +59,7 @@ public class feee_paying extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
+                                StaticClass.fill_customer(null);
                                 Toast.makeText(getApplicationContext(),"Updated Fee",Toast.LENGTH_SHORT).show();
                             }
                         }

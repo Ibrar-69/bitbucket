@@ -23,6 +23,8 @@ import com.google.firebase.storage.UploadTask;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -113,19 +115,18 @@ public class viewcustomer extends AppCompatActivity {
                                         obj.put("Fee","Paid");
                                         obj.put("Date", s.toString());
                                         Toast.makeText(getApplicationContext(),"User Stored Successfully",Toast.LENGTH_SHORT);
-                                        finish();
-                                        FirebaseFirestore db=FirebaseFirestore.getInstance();
-                                        /*db.collection("Fess").document(cobj.cnic.toString()).set(obj).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        //finish();
+                                        FirebaseFirestore dbb=FirebaseFirestore.getInstance();
+                                        dbb.collection("Fess").document(cnicc.toString()).set(obj).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if(task.isSuccessful()){
-                                                    //Toast.makeText(getApplicationContext(),"Fee Created",Toast.LENGTH_SHORT).show();
-                                                    //Intent it=new Intent(viewcustomer.this,addedSucessfuly.class);
-                                                    //startActivity(it);
-                                                    finish();
-                                                }
+                                                    Toast.makeText(getApplicationContext(),"Fee Created",Toast.LENGTH_SHORT).show();
+                                                    Intent it=new Intent(viewcustomer.this,addedSucessfuly.class);
+                                                    startActivity(it);
+                                                                                                   }
                                             }
-                                        });*/
+                                        });//
 
                                     }
                                 });
@@ -135,5 +136,10 @@ public class viewcustomer extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

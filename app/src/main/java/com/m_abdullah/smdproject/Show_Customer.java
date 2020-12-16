@@ -59,15 +59,17 @@ public class Show_Customer extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(getApplicationContext(),"Wait Please!",Toast.LENGTH_SHORT);
                         if(task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"Customer Deleted",Toast.LENGTH_SHORT).show();
-                            StaticClass.c_array.remove(StaticClass.search_result);
-                            StaticClass.search_result=null;
-                           new AlertDialog.Builder(getApplicationContext()).setTitle("SuccessFull").setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            FirebaseFirestore dbb=FirebaseFirestore.getInstance();
+                            dbb.collection("Fess").document(StaticClass.search_result.cnic.toString()).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(getApplicationContext(),"Customer Deleted",Toast.LENGTH_SHORT).show();
+                                    StaticClass.c_array.remove(StaticClass.search_result);
+                                    StaticClass.search_result=null;
                                     finish();
+
                                 }
-                            }).show();
+                            });
 
 
                         }
